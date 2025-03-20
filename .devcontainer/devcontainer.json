@@ -4,7 +4,7 @@
   "service": "dev_environment_ms_property",
   "workspaceFolder": "/workspaces/project",
   "shutdownAction": "stopCompose",
-  "postCreateCommand": "bash /workspaces/project/.devcontainer/bootstrap.sh",
+  // "postCreateCommand": "bash /workspaces/project/.devcontainer/bootstrap.sh",
   "extensions": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
