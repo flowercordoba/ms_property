@@ -4,18 +4,20 @@
   "service": "dev_environment_ms_property",
   "workspaceFolder": "/workspaces/project",
   "shutdownAction": "stopCompose",
-  // "postCreateCommand": "bash /workspaces/project/.devcontainer/bootstrap.sh",
   "extensions": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "eamodio.gitlens",
     "ms-azuretools.vscode-docker",
-    "ms-python.python"
+    "ms-python.python",
+    "Prisma.prisma",
+    "PKief.material-icon-theme"
   ],
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
     "editor.formatOnSave": true,
-    "python.pythonPath": "/usr/local/bin/python"
+    "python.pythonPath": "/usr/local/bin/python",
+    "workbench.iconTheme": "material-icon-theme"
   },
   "remoteEnv": {
     "PYTHONIOENCODING": "utf-8"
