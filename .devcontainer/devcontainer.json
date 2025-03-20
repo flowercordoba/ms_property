@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "dev_environment_ms_property",
+  "workspaceFolder": "/workspaces/project",
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "bash /workspaces/project/.devcontainer/bootstrap.sh",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "ms-azuretools.vscode-docker",
+    "ms-python.python"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true,
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "remoteEnv": {
+    "PYTHONIOENCODING": "utf-8"
+  }
+}
