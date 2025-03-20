@@ -9,21 +9,21 @@ services:
     working_dir: /workspaces/project
     command: tail -f /dev/null
 
-  # ms_property_service:
-  #   build:
-  #     context: ./ms_property
-  #     dockerfile: Dockerfile
-  #   container_name: ms_property_service
-  #   ports:
-  #     - "5003:5003"
-  #   volumes:
-  #     - ./ms_property:/usr/src/app
-  #   command: ["npm", "run", "start:dev"]
-  #   depends_on:
-  #     - dev_environment_ms_property
-  # nats-server:
-  #   image: nats:latest
-  #   ports:
-  #     - "4222:4222" 
-  #     - "8222:8222" 
+  ms_property_service:
+    build:
+      context: ./ms_property
+      dockerfile: Dockerfile
+    container_name: ms_property_service
+    ports:
+      - "5003:5003"
+    volumes:
+      - ./ms_property:/usr/src/app
+    command: ["npm", "run", "start:dev"]
+    depends_on:
+      - dev_environment_ms_property
+  nats-server:
+    image: nats:latest
+    ports:
+      - "4222:4222" 
+      - "8222:8222" 
     
