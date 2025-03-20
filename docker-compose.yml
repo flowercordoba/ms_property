@@ -11,7 +11,7 @@ services:
 
   ms_property_service:
     build:
-      context: ./ms_property
+      context: .
       dockerfile: Dockerfile
     container_name: ms_property_service
     ports:
