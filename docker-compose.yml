@@ -15,15 +15,16 @@ services:
       dockerfile: Dockerfile
     container_name: ms_property_service
     ports:
-      - "5003:5003"
+      - "3000:3000"
     volumes:
-      - ./ms_property:/usr/src/app
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
     command: ["npm", "run", "start:dev"]
     depends_on:
       - dev_environment_ms_property
+
   nats-server:
     image: nats:latest
     ports:
       - "4222:4222" 
-      - "8222:8222" 
-    
+      - "8222:8222"
